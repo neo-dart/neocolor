@@ -2,16 +2,12 @@
 
 Color definition, manipulation, conversion, and comparison in fluent Dart.
 
-<!-- ENABLE WHEN PUBLISHED
 [![On pub.dev][pub_img]][pub_url]
 [![Code coverage][cov_img]][cov_url]
 [![Github action status][gha_img]][gha_url]
 [![Dartdocs][doc_img]][doc_url]
--->
-
 [![Style guide][sty_img]][sty_url]
 
-<!-- ENABLE WHEN PUBLISHED
 [pub_url]: https://pub.dartlang.org/packages/neocolor
 [pub_img]: https://img.shields.io/pub/v/neocolor.svg
 [gha_url]: https://github.com/neo-dart/neocolor/actions
@@ -20,8 +16,6 @@ Color definition, manipulation, conversion, and comparison in fluent Dart.
 [cov_img]: https://codecov.io/gh/neo-dart/neocolor/branch/main/graph/badge.svg
 [doc_url]: https://www.dartdocs.org/documentation/neocolor/latest
 [doc_img]: https://img.shields.io/badge/Documentation-neocolor-blue.svg
--->
-
 [sty_url]: https://pub.dev/packages/neodart
 [sty_img]: https://img.shields.io/badge/style-neodart-9cf.svg
 
