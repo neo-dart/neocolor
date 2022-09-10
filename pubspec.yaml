@@ -1,6 +1,6 @@
 name: neocolor
 description: Color definition, manipulation, conversion, and comparison in fluent Dart.
-version: 0.0.0
+version: 0.1.0
 homepage: https://github.com/neo-dart/neocolor
 
 environment:
