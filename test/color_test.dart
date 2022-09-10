@@ -157,6 +157,15 @@ void main() {
     expect(hsb.opacity, 0x7F / 0xFF);
   });
 
+  test('should compute HSB/HSV for grayscale RGB', () {
+    final hsb = Color(0xFFCC0000).computeHSB();
+
+    expect(hsb.hue, 0);
+    expect(hsb.saturation, 1.0);
+    expect(hsb.brightness, 0.8);
+    expect(hsb.opacity, 1.0);
+  });
+
   test('should compute HSL', () {
     final hsl = Color(0xFF42A5F5).computeHSL();
 
