@@ -158,10 +158,10 @@ void main() {
   });
 
   test('should compute HSB/HSV for grayscale RGB', () {
-    final hsb = Color(0xFFCC0000).computeHSB();
+    final hsb = Color(0xFFCCCCCC).computeHSB();
 
     expect(hsb.hue, 0);
-    expect(hsb.saturation, 1.0);
+    expect(hsb.saturation, 0.0);
     expect(hsb.brightness, 0.8);
     expect(hsb.opacity, 1.0);
   });
