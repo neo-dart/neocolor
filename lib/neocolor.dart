@@ -251,9 +251,10 @@ class Color {
         green = b;
         blue = c;
         break;
+      // coverage:ignore-start
       default:
-        // coverage:ignore-line
         throw Error(/* I can't "prove" this, but this can never occur! */);
+      // coverage:ignore-end
     }
     return Color.fromRGBO(
       _angleToColor(red),
