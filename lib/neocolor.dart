@@ -252,6 +252,7 @@ class Color {
         blue = c;
         break;
       default:
+        // coverage:ignore-line
         throw Error(/* I can't "prove" this, but this can never occur! */);
     }
     return Color.fromRGBO(
@@ -462,22 +463,6 @@ class HSBResult {
     this.opacity,
   );
 
-  @override
-  int get hashCode => Object.hash(hue, saturation, brightness, opacity);
-
-  @override
-  bool operator ==(Object other) {
-    assert(
-      other is! HSBResult || other.runtimeType == HSBResult,
-      'Subtypes of HSLResult are not permitted',
-    );
-    return other is HSBResult &&
-        hue == other.hue &&
-        saturation == other.saturation &&
-        brightness == other.brightness &&
-        opacity == other.opacity;
-  }
-
   /// Converts back to an RGBA [Color].
   ///
   /// This is semantically identical to [Color.fromHSB], i.e.:
@@ -516,9 +501,6 @@ class HSBResult {
       opacity,
     );
   }
-
-  @override
-  String toString() => 'HSBResult <$hue, $saturation, $brightness, $opacity>';
 }
 
 /// Computational result of converting an RGBA [Color] to HSL.
@@ -559,22 +541,6 @@ class HSLResult {
     this.opacity,
   );
 
-  @override
-  int get hashCode => Object.hash(hue, saturation, lightness, opacity);
-
-  @override
-  bool operator ==(Object other) {
-    assert(
-      other is! HSLResult || other.runtimeType == HSLResult,
-      'Subtypes of HSLResult are not permitted',
-    );
-    return other is HSLResult &&
-        hue == other.hue &&
-        saturation == other.saturation &&
-        lightness == other.lightness &&
-        opacity == other.opacity;
-  }
-
   /// Converts back to an RGBA [Color].
   ///
   /// This is semantically identical to [Color.fromHSL], i.e.:
@@ -606,7 +572,4 @@ class HSLResult {
       o,
     );
   }
-
-  @override
-  String toString() => 'HSLResult <$hue, $saturation, $lightness, $opacity>';
 }

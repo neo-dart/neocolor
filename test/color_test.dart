@@ -61,6 +61,15 @@ void main() {
     expect(color, Color(0x7F60BFA7));
   });
 
+  group('should create RGBA values from a range of HSB values', () {
+    for (var h = 0.0; h < 360; h += 60) {
+      test('<h=$h>', () {
+        final color = Color.fromHSB(h, 0.50, 0.75, opacity: 0.5);
+        expect(color.computeHSB().hue, h);
+      });
+    }
+  });
+
   test('should create RGBA values from HSL', () {
     final color = Color.fromHSL(165, 0.50, 0.75, opacity: 0.5);
 
@@ -155,5 +164,18 @@ void main() {
     expect(hsl.saturation, closeTo(0.899, 0.0005));
     expect(hsl.lightness, closeTo(0.6100, 0.0005));
     expect(hsl.opacity, 1.0);
+  });
+
+  test('should compute a hashCode', () {
+    final a = Color.fromARGB(0x00, 0x33, 0x66, 0x99);
+    final b = Color.fromARGB(0x00, 0x33, 0x66, 0x99);
+
+    expect(a.hashCode, b.hashCode);
+  });
+
+  test('should return a readable toString()', () {
+    final c = Color.fromARGB(0x00, 0x33, 0x66, 0x99);
+
+    expect('$c', contains('0x00336699'));
   });
 }

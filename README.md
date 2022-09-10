@@ -43,8 +43,8 @@ void main() {
   print('$c3 == $c4: ${c3 == c4}');
 
   // NEW: Use HSB (sometimes called HSV) and HSL to create colors too!
-  final c5 = Color.fromHSB(207, 73.1, 96.1);
-  final c6 = Color.fromHSL(207, 89.9, 61.0);
+  final c5 = Color.fromHSB(206.8, 0.7306, 0.9608);
+  final c6 = Color.fromHSL(206.8, 0.8990, 0.6100);
   print('$c5 == $c6: ${c5 == c6}');
 }
 ```
